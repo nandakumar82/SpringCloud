@@ -4,37 +4,37 @@
 spring:
   profiles: sentence
   application:
-    name: lab-4-sentence
+    name: sentence
     
 ---
 spring:
   profiles: subject
   application:
-    name: lab-4-subject
+    name: subject
   
 ---
 spring:
   profiles: verb
   application:
-    name: lab-4-verb
+    name: verb
 
 ---
 spring:
   profiles: article
   application:
-    name: lab-4-article
+    name: article
 
 ---
 spring:
   profiles: adjective
   application:
-    name: lab-4-adjective
+    name: adjective
 
 ---
 spring:
   profiles: noun
   application:
-    name: lab-4-noun
+    name: noun
 
 ---
 spring:

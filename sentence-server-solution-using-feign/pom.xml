@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>config-server-solution</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>sentence-server-solution-using-feign</artifactId>
+	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>config-server-solution</name>
-	<description>Demo project for Spring Boot</description>
+	<name>sentence-server-solution-using-feign</name>
+	<description>Example microservice which uses Feign to assemble a sentence from words served by other services.</description>
 
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
@@ -25,11 +25,38 @@
 	</properties>
 
 	<dependencies>
+	
+		<!-- Needed since 1.0.2 -->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+        	<groupId>org.springframework.cloud</groupId>
+        	<artifactId>spring-cloud-starter-config</artifactId>
+    	</dependency>
+    		
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-eureka</artifactId>
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-ribbon</artifactId>
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-feign</artifactId>
+	    </dependency>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+				
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

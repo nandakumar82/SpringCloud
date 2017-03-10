@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>lab-3-client-solution</artifactId>
+	<artifactId>config-server-client-solution</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>lab-3-client-solution</name>
+	<name>config-server-client-solution</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
