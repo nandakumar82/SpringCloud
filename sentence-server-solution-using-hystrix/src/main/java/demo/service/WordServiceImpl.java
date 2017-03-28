@@ -25,6 +25,7 @@ public class WordServiceImpl implements WordService {
 	
 	@Override
 	@HystrixCommand(fallbackMethod="getFallbackSubject")
+	//@Retryable(value = { Exception.class }, maxAttempts = 5, backoff = @Backoff(delay = 5000))
 	public Word getSubject() {
 		return subjectClient.getWord();
 	}
@@ -49,7 +50,7 @@ public class WordServiceImpl implements WordService {
 	@HystrixCommand(fallbackMethod="getFallbackNoun")
 	public Word getNoun() {
 		return nounClient.getWord();
-	}	
+	}
 
 	public Word getFallbackSubject() {
 		return new Word("Someone");

@@ -4,7 +4,35 @@ spring:
   application:
     name: sentence
   cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: true
     config:
       uri: http://localhost:8001	# Expect the Spring Cloud Config server to be running on localhost, port 8001.  
 server:
   port: 8020      # Fix the sentence server to 8020.  This makes it easy to find.
+
+#hystrix:
+#  command:
+#    ribbon:
+#      execution:
+##        timeout:
+##          enabled: true
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 20000
+
+#subject:
+#  ribbon:
+#    ReadTimeout: 7000
+#    ConnectTimeout: 6000
+
+#sentence:
+#  ribbon:
+#    MaxAutoRetries:5
+#    OkToRetryOnAllOperations:true
+
+#verb:
+ribbon:
+  MaxAutoRetries:5
+  OkToRetryOnAllOperations:true

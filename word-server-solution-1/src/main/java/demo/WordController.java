@@ -15,7 +15,6 @@ public class WordController {
     @Value("${words}")
     String words;
     // String words = "icicle,refrigerator,blizzard,snowball";
-
     @Autowired
     DiscoveryClient client;
 
@@ -35,7 +34,6 @@ public class WordController {
         int i;
         wordArray = words.split(",");
         i = (int) Math.round(Math.random() * (wordArray.length - 1));
-        int j = i/0;
         return new Word(wordArray[i]);
 
     }
