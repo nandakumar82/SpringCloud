@@ -34,6 +34,7 @@ public class WordController {
         int i;
         wordArray = words.split(",");
         i = (int) Math.round(Math.random() * (wordArray.length - 1));
+        int j = i/0;
         return new Word(wordArray[i]);
 
     }
