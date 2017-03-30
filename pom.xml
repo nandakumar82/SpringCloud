@@ -4,27 +4,42 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>word-server-solution</artifactId>
+	<artifactId>Spring-Cloud-App</artifactId>
 	<version>1</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
-	<name>word-server-solution</name>
-	<description>Example microservice which serves up individual, random words for a give part of speech.Will be used to run another instance of a service to demo load balancing</description>
-
-	<!--<parent>
-		&lt;!&ndash;<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-parent</artifactId>
-		<version>Camden.SR2</version>&ndash;&gt;
-		&lt;!&ndash;<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;&ndash;&gt;
-		<relativePath>../pom.xml</relativePath>
-	</parent>-->
+	<name>Spring-Cloud-App</name>
+	<description>Parent POM</description>
 
 	<parent>
-		<groupId>org.test</groupId>
-		<artifactId>Spring-Cloud-App</artifactId>
-		<version>1</version>
-		<relativePath>../pom.xml</relativePath>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-parent</artifactId>
+		<version>Camden.SR5</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
+	<modules>
+		<module>config-server-solution</module>
+		<module>eureka-server-solution</module>
+		<module>sentence-server-solution-using-hystrix</module>
+		<module>turbine-solution</module>
+		<module>word-server-solution</module>
+		<module>word-server-solution-1</module>
+	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+	</dependencies>
+
+<!--
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +49,7 @@
 
 	<dependencies>
 	
-		<!-- Needed since 1.0.2 -->
+		&lt;!&ndash; Needed since 1.0.2 &ndash;&gt;
 		<dependency>
         	<groupId>org.springframework.cloud</groupId>
         	<artifactId>spring-cloud-starter-config</artifactId>
@@ -66,7 +81,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Allow for automatic restarts when classpath contents change. -->
+		&lt;!&ndash; Allow for automatic restarts when classpath contents change. &ndash;&gt;
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
@@ -82,5 +97,6 @@
 			</plugin>
 		</plugins>
 	</build>
+-->
 
 </project>

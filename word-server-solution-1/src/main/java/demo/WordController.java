@@ -1,5 +1,7 @@
 package demo;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -8,16 +10,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
+@Api(value="Word",description = "Generates Words")
 @Controller
 public class WordController {
 
     @Value("${words}")
     String words;
     // String words = "icicle,refrigerator,blizzard,snowball";
+
     @Autowired
     DiscoveryClient client;
 
+    @ApiOperation(value="getWord", notes = "Generates words on a Get call based on the profile for which the word service is being run")
     @RequestMapping("/")
     public
     @ResponseBody

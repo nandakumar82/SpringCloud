@@ -11,11 +11,12 @@
 	<name>sentence-server-solution-using-hystrix</name>
 	<description>Example microservice which uses Hystrix to isolate the effect of dependent service failures.</description>
 
+
 	<parent>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-parent</artifactId>
-		<version>Camden.SR5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>org.test</groupId>
+		<artifactId>Spring-Cloud-App</artifactId>
+		<version>1</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<properties>
