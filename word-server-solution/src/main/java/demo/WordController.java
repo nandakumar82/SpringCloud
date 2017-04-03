@@ -22,7 +22,7 @@ public class WordController {
     DiscoveryClient client;
 
     @ApiOperation(value="getWord", notes = "Generates words on a Get call based on the profile for which the word service is being run")
-    @RequestMapping("/")
+    @RequestMapping("/word")
     public
     @ResponseBody
     Word getWord() throws Exception {

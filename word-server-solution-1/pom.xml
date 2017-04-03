@@ -4,20 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>word-server-solution</artifactId>
+	<artifactId>word-server-solution-1</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>word-server-solution</name>
+	<name>word-server-solution-1</name>
 	<description>Example microservice which serves up individual, random words for a give part of speech.Will be used to run another instance of a service to demo load balancing</description>
-
-	<!--<parent>
-		&lt;!&ndash;<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-parent</artifactId>
-		<version>Camden.SR2</version>&ndash;&gt;
-		&lt;!&ndash;<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;&ndash;&gt;
-		<relativePath>../pom.xml</relativePath>
-	</parent>-->
 
 	<parent>
 		<groupId>org.test</groupId>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Api(value="Word",description = "Generates Words")
 @Controller
+@RequestMapping("/word")
 public class WordController {
 
     @Value("${words}")

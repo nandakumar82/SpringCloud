@@ -32,9 +32,9 @@ The order for running the modules
 4. [sentence-server-solution-using-hystrix] this has the sentence service which consumes all the word services to generate a meaningful sentence.
 5. [turbine-solution] this has the turbine integration
 
-http://localhost:8010/ is the URL to the Eureka Server [All the services are registered here]
-http://localhost:8020/sentence is the URL to the Sentence Service
-http://localhost:8020/hystrix is the URL to the Hystrix Dashboard
+    http://localhost:8010/ is the URL to the Eureka Server [All the services are registered here]
+    http://localhost:8020/sentence is the URL to the Sentence Service
+    http://localhost:8020/hystrix is the URL to the Hystrix Dashboard
 
 For teh purpose of demoing fallback and load balancing using Feign and Ribbon, I have created another module [word-server-solution-1] which has the same code as in the module [word-server-solution] but there is an exception thrown here.
 
@@ -52,20 +52,27 @@ Examine the logs generated in the console for the Subject and Subject2 Instances
 The requests will be following the round robbin pattern, whenever there is a failure in the Subject instance, the Hystrix Code fallsback kicks in to provide a placeholder which is 'Someone' as the Subject.
 
 
-Some Sentences
+        Some Sentences
+        
+        
+        You knew a reasonable book.
+        
+        Someone knew a ordinary seat.
+        
+        You knew a ordinary book.
+        
+        Someone had the leaky groundhog.
+        
+        She had the suspicious book.
+        
+        Elapsed time (ms): 1280
 
 
-You knew a reasonable book.
+The project has been configured to use swaggerfor the purpose of automating the APIs and for ease of testing.
 
-Someone knew a ordinary seat.
+Swagger Url for the sentence service:   http://localhost:8020/swagger-ui.html
 
-You knew a ordinary book.
-
-Someone had the leaky groundhog.
-
-She had the suspicious book.
-
-Elapsed time (ms): 1280
+Like wise for the word services, simply need to append swagger-ui.html to the base url.
 
 
 
