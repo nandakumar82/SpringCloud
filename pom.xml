@@ -19,9 +19,11 @@
 	</parent>
 
 	<modules>
+		<module>config-server-client-solution</module>
 		<module>config-server-solution</module>
 		<module>eureka-server-solution</module>
 		<module>sentence-server-solution-using-hystrix</module>
+		<module>gateway-solution</module>
 		<module>turbine-solution</module>
 		<module>word-server-solution</module>
 		<module>word-server-solution-1</module>
